@@ -309,6 +309,9 @@ pre {
 #fh5co-intro .fh5co-intro-sub {
   margin: 2em 0;
 }
+.img-sub {
+  margin: 1em 0 0 0;
+}
 @media screen and (max-width: 768px) {
   #fh5co-intro .fh5co-intro-sub {
     margin: 1em 0;
