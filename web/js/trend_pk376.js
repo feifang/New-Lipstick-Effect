@@ -1121,5 +1121,5 @@ var chart2 = AmCharts.makeChart("trend_pk376",
 chart2.addListener("dataUpdated", zoomChart);
 
 function zoomChart() {
-    chart2.zoomToDates(new Date(2012, 1, 29), new Date(2014, 6, 29));
+    chart2.zoomToDates(new Date(2012, 6, 07), new Date(2014, 6, 29));
 }
