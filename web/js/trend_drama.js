@@ -24,7 +24,7 @@ var chart1 = AmCharts.makeChart("trend_drama",
         "color": "#DAF0FD",
         "bullet": "web/images/drama_4.png"
     }, {
-        "name": "Descendants of sun",
+        "name": "Descendants of Sun",
         "points": 64,
         "color": "#cd82ad",
         "bullet": "web/images/drama_5.png"
