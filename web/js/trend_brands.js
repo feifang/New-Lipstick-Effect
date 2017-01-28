@@ -7,27 +7,27 @@ var chart0 = AmCharts.makeChart("trend_brands",
         "name": "LANEIGE",
         "points": 103,
         "color": "#7F8DA9",
-        "bullet": "web/images/K4.png"
+        "bullet": "web/images/logo_1.png"
     }, {
         "name": "Shu uemura",
         "points": 95,
         "color": "#FEC514",
-        "bullet": "web/images/K3.png"
+        "bullet": "web/images/logo_2.png"
     }, {
         "name": "YSL",
         "points": 73,
         "color": "#DB4C3C",
-        "bullet": "web/images/K2.png"
+        "bullet": "web/images/logo_3.png"
     }, {
         "name": "CLIO",
         "points": 68,
         "color": "#DAF0FD",
-        "bullet": "web/images/K1.png"
+        "bullet": "web/images/logo_4.png"
     }, {
         "name": "Giorgio Armani",
         "points": 61,
         "color": "#cd82ad",
-        "bullet": "web/images/K8.png"
+        "bullet": "web/images/logo_5.png"
     }],
     "valueAxes": [{
         "maximum": 120,
@@ -39,8 +39,8 @@ var chart0 = AmCharts.makeChart("trend_brands",
     "startDuration": 1,
     "graphs": [{
         "balloonText": "<span style='font-size:13px;'>[[category]]: <b>[[value]]</b></span>",
-        "bulletOffset": 10,
-        "bulletSize": 100,
+        "bulletOffset": 20,
+        "bulletSize": 150,
         "colorField": "color",
         "cornerRadiusTop": 8,
         "customBulletField": "bullet",
