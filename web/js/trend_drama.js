@@ -4,33 +4,33 @@ var chart1 = AmCharts.makeChart("trend_drama",
     "theme": "light",
     "fontFamily": "PT Mono",
     "dataProvider": [{
-        "name": "LANEIGE",
-        "points": 103,
+        "name": "Producer",
+        "points": 107,
         "color": "#7F8DA9",
-        "bullet": "web/images/logo_1.png"
+        "bullet": "web/images/drama_1.png"
     }, {
-        "name": "Shu uemura",
-        "points": 95,
+        "name": "My Love From Star",
+        "points": 91,
         "color": "#FEC514",
-        "bullet": "web/images/logo_2.png"
+        "bullet": "web/images/drama_2.png"
     }, {
-        "name": "YSL",
-        "points": 73,
+        "name": "Miss You",
+        "points": 88,
         "color": "#DB4C3C",
-        "bullet": "web/images/logo_3.png"
+        "bullet": "web/images/drama_3.png"
     }, {
-        "name": "CLIO",
-        "points": 68,
+        "name": "She Was Pretty",
+        "points": 69,
         "color": "#DAF0FD",
-        "bullet": "web/images/logo_4.png"
+        "bullet": "web/images/drama_4.png"
     }, {
-        "name": "Giorgio Armani",
-        "points": 61,
+        "name": "Descendants of sun",
+        "points": 64,
         "color": "#cd82ad",
-        "bullet": "web/images/logo_5.png"
+        "bullet": "web/images/drama_5.png"
     }],
     "valueAxes": [{
-        "maximum": 120,
+        "maximum": 140,
         "minimum": 0,
         "axisAlpha": 0,
         "dashLength": 4,
@@ -39,8 +39,8 @@ var chart1 = AmCharts.makeChart("trend_drama",
     "startDuration": 1,
     "graphs": [{
         "balloonText": "<span style='font-size:13px;'>[[category]]: <b>[[value]]</b></span>",
-        "bulletOffset": 20,
-        "bulletSize": 150,
+        "bulletOffset": 0,
+        "bulletSize": 160,
         "colorField": "color",
         "cornerRadiusTop": 8,
         "customBulletField": "bullet",
