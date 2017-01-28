@@ -193,17 +193,20 @@ pre {
     margin-top: 1em;
   }
 }
+/* 
 #fh5co-header #fh5co-logo {
   float: left;
   position: relative;
   z-index: 102;
   display: block;
 }
+ */
 
 #fh5co-main-nav {
   position: relative;
   margin-top: 24px;
 }
+
 #fh5co-main-nav #fh5co-nav {
   position: relative;
   width: 100%;
@@ -240,6 +243,8 @@ pre {
   }
 }
 #fh5co-main-nav ul > li {
+  float: left;
+  width: 20%;
   padding: 0;
   margin: 0 0 7px 0;
   list-style: none;
