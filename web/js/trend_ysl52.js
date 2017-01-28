@@ -1,4 +1,4 @@
-var chart2 = AmCharts.makeChart("trend_ysl52",
+var chart3 = AmCharts.makeChart("trend_ysl52",
 				{
 					"type": "serial",
 					"categoryField": "date",
@@ -1118,8 +1118,8 @@ var chart2 = AmCharts.makeChart("trend_ysl52",
 				}
 			);
 			
-chart2.addListener("dataUpdated", zoomChart);
+chart3.addListener("dataUpdated", zoomChart);
 
 function zoomChart() {
-    chart2.zoomToDates(new Date(2013, 06, 30), new Date(2015, 04, 26));
+    chart3.zoomToDates(new Date(2013, 06, 30), new Date(2015, 04, 26));
 }
