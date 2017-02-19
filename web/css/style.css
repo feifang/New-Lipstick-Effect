@@ -1296,4 +1296,66 @@ a > img.fh5co-align-center {
   color: #7b7b7b;
 }
 
+/* sort buttons css */
+
+.btn-group {
+  position: relative;
+  display: inline-block;
+  float: right;
+  vertical-align: middle;
+  /* margin-right: 10%; */
+}
+.btn-group .sort-btn {
+  cursor: pointer;
+  float: left;
+  height: 40px;
+  width: 160px;
+  line-height: 40px;
+  text-align: center;
+  -webkit-user-select: none;
+  transition: font-size 0.3s ease;
+}
+.btn-group .sort-btn:active {
+  font-size: 0.8em;
+}
+.btn-group svg {
+  z-index: -1;
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.btn-group path {
+  fill: none;
+  stroke: #f74577;
+  stroke-dasharray: 334.9, 99999;
+  transition: stroke-dashoffset 1s cubic-bezier(0, 0.8, 0.2, 1);
+  stroke-width: 1;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.button-container {
+  font-weight: 300;
+  color: #f74577;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media (max-width: 30em) {
+  body {
+    zoom: 0.75;
+  }
+}
+@media (max-width: 25em) {
+  body {
+    zoom: 0.5;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
