@@ -358,7 +358,7 @@ pre {
 }
 #fh5co-work .fh5co-work-item .fh5co-overlay-text {
   text-align: center;
-  top: 10%;  /*changed from 50*/
+  top: 5%;  /*changed from 50*/
   margin-top: -36px;
   z-index: 56;
   width: 100%;
