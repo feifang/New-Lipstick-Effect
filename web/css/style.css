@@ -337,7 +337,7 @@ pre {
 }
 #fh5co-work .fh5co-work-item img {
   float: left;
-  margin: 0;
+  margin: 0 0 10px 0;
   padding: 0;
 }
 #fh5co-work .fh5co-work-item:hover, #fh5co-work .fh5co-work-item:focus, #fh5co-work .fh5co-work-item:active {
@@ -358,11 +358,11 @@ pre {
 }
 #fh5co-work .fh5co-work-item .fh5co-overlay-text {
   text-align: center;
-  top: 50%;
+  top: 10%;  /*changed from 50*/
   margin-top: -36px;
   z-index: 56;
   width: 100%;
-  padding: 0 15px; /*changed from 30*/
+  padding: 0; /*changed from 30*/
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -374,17 +374,21 @@ pre {
   font-size: 14px !important; /*changed from 18*/
   line-height: 15px !important; /*changed from 20*/
 }
+#fh5co-work .fh5co-work-item .fh5co-overlay-text img {
+  margin-bottom: 10px; /*added for still pics*/
+}
 #fh5co-work .fh5co-work-item .fh5co-overlay-text .fh5co-categories {
   text-align: center;
   width: 100%;
   padding: 0;
-  margin: 0;
+  margin: 8px 0 0 0;
 }
 #fh5co-work .fh5co-work-item .fh5co-overlay-text .fh5co-categories li {
   padding: 0;
   margin: 0;
   list-style: none;
-  display: inline;
+  /* display: inline; */
+  line-height: 18px;
   font-size: 11px;
   color: #7b7b7b;
 }
