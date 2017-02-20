@@ -1327,6 +1327,9 @@ a > img.fh5co-align-center {
 .btn-group .sort-btn:active {
   font-size: 0.8em;
 }
+.btn-group .sort-btn:hover {
+  font-size: 1.3em;
+}
 .btn-group svg {
   z-index: -1;
   top: 0;
