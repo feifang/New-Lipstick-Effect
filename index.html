@@ -125,9 +125,9 @@ DESIGNED & DEVELOPED by FREEHTML5.CO
 						<div class="fh5co-spacer fh5co-spacer-xlg"></div>
 						<div class="button-container">
   							<div class="btn-group">
-    						<div class="sort-btn">Hotest</div>
-    						<div class="sort-btn active">Latest</div>
-    						<div class="sort-btn">Brands</div>
+    						<div id="hottest" class="sort-btn">Hottest</div>
+    						<div id="latest" class="sort-btn active">Latest</div>
+    						<div id="brands" class="sort-btn">Brands</div>
   						</div>
 					</div>
 					</div>
@@ -802,13 +802,19 @@ Designed by: <a href="http://freehtml5.co/">freehtml5.co</a> </small>
 
 	</body>
 </html>
-<!-- 
 <script type="text/javascript" language="Javascript">
 
-var divList = $(".fh5co-work-wrap");
-// divList.sort(function(a, b){ return $(a).data("time")-$(b).data("time")});
-divList.sort(function(a, b){ return $(b).data("occurrence")-$(a).data("occurrence")}); //in descending order
-$("#shades-container").html(divList);
+$("#hottest").click(function(){
+  var divList = $(".fh5co-work-wrap");
+  divList.sort(function(a, b){ return $(b).data("occurrence")-$(a).data("occurrence")}); //in descending order
+  $("#shades-container").html(divList);
+});
+$("#latest").click(function(){
+  var divList = $(".fh5co-work-wrap");
+  divList.sort(function(a, b){ return $(a).data("time")-$(b).data("time")});
+  $("#shades-container").html(divList);
+});
+
 
 </script>
- -->
+
