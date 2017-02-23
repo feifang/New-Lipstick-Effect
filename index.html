@@ -127,7 +127,8 @@ DESIGNED & DEVELOPED by FREEHTML5.CO
   							<div class="btn-group">
     						<div id="hottest" class="sort-btn">Hottest</div>
     						<div id="latest" class="sort-btn active">Latest</div>
-    						<div id="price" class="sort-btn">Price⇣<span style="color:#adadad">⇡</span></div>
+    						<!-- used these arrows cause normal ones wouldn't be the same size somehow -->
+    						<div id="price" class="sort-btn">Price<span id="down_arrow" class="inactive" style="font-weight:bold">⇣</span><span id="up_arrow" class="inactive" style="font-weight:bold">⇡</span></div>
   						</div>
 					</div>
 					</div>
@@ -838,6 +839,12 @@ Designed by: <a href="http://freehtml5.co/">freehtml5.co</a> </small>
 </html>
 <script type="text/javascript" language="Javascript">
 
+// disable click event on <span> in buttons (arrows in sort button)
+$(".sort-btn span").css("pointer-events", "none");
+// disable click event on <div> for lipstick shades
+$(".fh5co-work-wrap a").off('click');
+
+fh5co-work-item
 $("#hottest").click(function(){
   var divList = $(".fh5co-work-wrap");
   divList.sort(function(a, b){ return $(b).data("occurrence")-$(a).data("occurrence")}); //in descending order
@@ -848,11 +855,25 @@ $("#latest").click(function(){
   divList.sort(function(a, b){ return $(a).data("time")-$(b).data("time")});
   $("#shades-container").html(divList);
 });
+// desc & asc sorting
 $("#price").click(function(){
   var divList = $(".fh5co-work-wrap");
-  divList.sort(function(a, b){ return $(b).data("listing-price")-$(a).data("listing-price")});
+  var asc = $('#up_arrow')
+  var desc = $('#down_arrow')
+  if (asc.hasClass('inactive')&&desc.hasClass('inactive')){
+  	divList.sort(function(a, b){ return $(b).data("listing-price")-$(a).data("listing-price")});
+  	desc.removeClass('inactive');
+  } else if(asc.hasClass('inactive')&&!desc.hasClass('inactive')) {
+  	divList.sort(function(a, b){ return $(a).data("listing-price")-$(b).data("listing-price")});
+  	asc.removeClass('inactive');
+  	desc.addClass('inactive');
+  } else if(!asc.hasClass('inactive')&&desc.hasClass('inactive')) {
+  	divList.sort(function(a, b){ return $(b).data("listing-price")-$(a).data("listing-price")});
+  	asc.addClass('inactive');
+  	desc.removeClass('inactive');
+  }
   $("#shades-container").html(divList);
-r});
+});
 
 
 </script>

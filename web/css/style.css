@@ -155,6 +155,10 @@ ul ul, ul ol, ol ul, ol ol {
   padding-left: 25px;
 }
 
+.inactive {
+  color:#adadad;
+}
+
 pre {
   white-space: pre-wrap;
   /* CSS3 browsers  */
