@@ -30,6 +30,7 @@ var chart0 = AmCharts.makeChart("trend_brands",
         "bullet": "web/images/logo_5.png"
     }],
     "valueAxes": [{
+    	"title": "Occurrence Frequency",
         "maximum": 120,
         "minimum": 0,
         "axisAlpha": 0,
@@ -49,16 +50,17 @@ var chart0 = AmCharts.makeChart("trend_brands",
         "type": "column",
         "valueField": "points"
     }],
-    "marginTop": 0,
+//     "marginTop": 0,
     "marginRight": 0,
     "marginLeft": 0,
     "marginBottom": 0,
-    "autoMargins": false,
+//     "autoMargins": false,
     "categoryField": "name",
     "categoryAxis": {
+    	"title": "Brands",
         "axisAlpha": 0,
         "gridAlpha": 0,
-        "inside": true,
+//         "inside": true,
         "tickLength": 0
     },
     "export": {
