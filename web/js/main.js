@@ -7,6 +7,10 @@
 		$(".sort-btn span").css("pointer-events", "none");
 		// disable click event on <div> for lipstick shades
 		$(".fh5co-work-wrap a").off('click');
+		// sort by occurence by default
+		var divList = $(".fh5co-work-wrap");
+		divList.sort(function(a, b){ return $(b).data("occurrence")-$(a).data("occurrence")}); //in descending order
+  		$("#shades-container").html(divList);
 	};
 
 	// iPad and iPod detection	
@@ -231,19 +235,17 @@
 	};
 	
 	var sortShades = function() {
+		var divList = $(".fh5co-work-wrap");
 		$("#hottest").click(function(){
-  			var divList = $(".fh5co-work-wrap");
   			divList.sort(function(a, b){ return $(b).data("occurrence")-$(a).data("occurrence")}); //in descending order
   			$("#shades-container").html(divList);
 		});
 		$("#latest").click(function(){
-  			var divList = $(".fh5co-work-wrap");
   			divList.sort(function(a, b){ return $(a).data("time")-$(b).data("time")});
   			$("#shades-container").html(divList);
 		});
 		// desc & asc sorting
 		$("#price").click(function(){
-  			var divList = $(".fh5co-work-wrap");
   			var asc = $('#up_arrow')
   			var desc = $('#down_arrow')
   			if (asc.hasClass('inactive')&&desc.hasClass('inactive')){
