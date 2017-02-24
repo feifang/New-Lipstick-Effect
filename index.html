@@ -844,7 +844,6 @@ $(".sort-btn span").css("pointer-events", "none");
 // disable click event on <div> for lipstick shades
 $(".fh5co-work-wrap a").off('click');
 
-fh5co-work-item
 $("#hottest").click(function(){
   var divList = $(".fh5co-work-wrap");
   divList.sort(function(a, b){ return $(b).data("occurrence")-$(a).data("occurrence")}); //in descending order

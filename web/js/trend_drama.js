@@ -30,7 +30,7 @@ var chart1 = AmCharts.makeChart("trend_drama",
         "bullet": "web/images/drama_5.png"
     }],
     "valueAxes": [{
-    	"title": "Occurrence Frequency",
+    	"title": "Occurrence Number",
         "maximum": 140,
         "minimum": 0,
         "axisAlpha": 0,
