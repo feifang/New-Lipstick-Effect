@@ -242,6 +242,10 @@
 		});
 		$("#latest").click(function(){
   			divList.sort(function(a, b){ return $(a).data("time")-$(b).data("time")});
+  			// update text with time info
+  			divList.each(function(){
+  				$(this).find("li").text($(this).data("time"));
+			});
   			$("#shades-container").html(divList);
 		});
 		// desc & asc sorting
@@ -260,6 +264,10 @@
   				asc.addClass('inactive');
 				desc.removeClass('inactive');
   			}
+  			// update text with price info
+  			divList.each(function(){
+  				$(this).find("li").text("Price: CNY" + $(this).data("listing-price"));
+			});
   			$("#shades-container").html(divList);
 		});
 		//re-assign the onmouseover event after re-ordering shades
