@@ -223,6 +223,13 @@
 
 	};
 	
+ 	//re-assign the onmouseover event after re-ordering shades
+	var jsReload = function() {
+		$('.sort-btn').click(function(event){
+			imgHover();
+		});
+	};
+	
 
 	$(function(){
 		burgerMenu();
@@ -234,6 +241,7 @@
 		sScrollTop();
 		wResize();
 		viewWorks();
+		jsReload();
 	});
 
 
