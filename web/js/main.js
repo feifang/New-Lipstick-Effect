@@ -241,10 +241,11 @@
   			$("#shades-container").html(divList);
 		});
 		$("#latest").click(function(){
-  			divList.sort(function(a, b){ return $(a).data("time")-$(b).data("time")});
+  			divList.sort(function(a, b){ return $(b).data("time")-$(a).data("time")});
   			// update text with time info
   			divList.each(function(){
-  				$(this).find("li").text($(this).data("time"));
+  				var t = $(this).data("time").toString();
+  				$(this).find("li").text("Time: " + t.slice(0,4) + "/" + t.slice(4,6) + "/" + t.slice(6));
 			});
   			$("#shades-container").html(divList);
 		});
@@ -267,6 +268,8 @@
   			// update text with price info
   			divList.each(function(){
   				$(this).find("li").text("Price: CNY" + $(this).data("listing-price"));
+  				// var myPrice = $(this).data("listing-price").toString();
+//   				$(this).find("li").text("Price: CNY" + myPrice[0,1]+"-"+myPrice[1,1]);
 			});
   			$("#shades-container").html(divList);
 		});
