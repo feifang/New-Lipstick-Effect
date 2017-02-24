@@ -1,6 +1,13 @@
 ;(function () {
 	
 	'use strict';
+	
+	var init = function() {
+		// disable click event on <span> in buttons (arrows in sort button)
+		$(".sort-btn span").css("pointer-events", "none");
+		// disable click event on <div> for lipstick shades
+		$(".fh5co-work-wrap a").off('click');
+	};
 
 	// iPad and iPod detection	
 	var isiPad = function(){
@@ -223,8 +230,37 @@
 
 	};
 	
- 	//re-assign the onmouseover event after re-ordering shades
-	var jsReload = function() {
+	var sortShades = function() {
+		$("#hottest").click(function(){
+  			var divList = $(".fh5co-work-wrap");
+  			divList.sort(function(a, b){ return $(b).data("occurrence")-$(a).data("occurrence")}); //in descending order
+  			$("#shades-container").html(divList);
+		});
+		$("#latest").click(function(){
+  			var divList = $(".fh5co-work-wrap");
+  			divList.sort(function(a, b){ return $(a).data("time")-$(b).data("time")});
+  			$("#shades-container").html(divList);
+		});
+		// desc & asc sorting
+		$("#price").click(function(){
+  			var divList = $(".fh5co-work-wrap");
+  			var asc = $('#up_arrow')
+  			var desc = $('#down_arrow')
+  			if (asc.hasClass('inactive')&&desc.hasClass('inactive')){
+  				divList.sort(function(a, b){ return $(b).data("listing-price")-$(a).data("listing-price")});
+  				desc.removeClass('inactive');
+  			} else if(asc.hasClass('inactive')&&!desc.hasClass('inactive')) {
+  				divList.sort(function(a, b){ return $(a).data("listing-price")-$(b).data("listing-price")});
+  				asc.removeClass('inactive');
+  				desc.addClass('inactive');
+  			} else if(!asc.hasClass('inactive')&&desc.hasClass('inactive')) {
+  				divList.sort(function(a, b){ return $(b).data("listing-price")-$(a).data("listing-price")});
+  				asc.addClass('inactive');
+				desc.removeClass('inactive');
+  			}
+  			$("#shades-container").html(divList);
+		});
+		//re-assign the onmouseover event after re-ordering shades
 		$('.sort-btn').click(function(event){
 			imgHover();
 		});
@@ -232,6 +268,7 @@
 	
 
 	$(function(){
+		init();
 		burgerMenu();
 		mobileFastClick();
 		responsiveTabs();
@@ -241,7 +278,7 @@
 		sScrollTop();
 		wResize();
 		viewWorks();
-		jsReload();
+		sortShades();
 	});
 
 
