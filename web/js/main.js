@@ -2,6 +2,7 @@
 	
 	'use strict';
 	
+	// last edited on 2017/02/25
 	var init = function() {
 		// disable click event on <span> in buttons (arrows in sort button)
 		$(".sort-btn span").css("pointer-events", "none");
@@ -234,6 +235,7 @@
 
 	};
 	
+	// last edited on 2017/02/24
 	var sortShades = function() {
 		var divList = $(".fh5co-work-wrap");
 		$("#hottest").click(function(){
@@ -279,6 +281,25 @@
 		});
 	};
 	
+	var wResize = function() {
+		mobileMenuState();
+		imgHover();
+		$(window).resize(function(){
+			mobileMenuState();
+			imgHover();
+		});
+
+	};
+	
+	// last edited on 2017/02/25
+	var adjustTooltipPos = function() {
+		var buttons = $('.sort-btn');
+		buttons.each(function(){
+  			var h = $(this).find(".tip-content").height();
+  			$(this).find(".tip-content").css("margin-top", -h-6);
+		});
+	};
+	
 
 	$(function(){
 		init();
@@ -292,6 +313,7 @@
 		wResize();
 		viewWorks();
 		sortShades();
+		adjustTooltipPos();
 	});
 
 

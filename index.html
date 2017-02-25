@@ -53,6 +53,10 @@ DESIGNED & DEVELOPED by FREEHTML5.CO
 	<!-- Theme Style -->
 	<link rel="stylesheet" href="web/css/style.css">
 	
+<!-- 
+	<link rel="stylesheet" href="web/css/balloon.css">
+ -->
+	
 	
 	<!-- FOR IE9 below -->
 	<!--[if lte IE 9]>
@@ -125,10 +129,10 @@ DESIGNED & DEVELOPED by FREEHTML5.CO
 						<div class="fh5co-spacer fh5co-spacer-xlg"></div>
 						<div class="button-container">
   							<div class="btn-group">
-    						<div id="hottest" class="sort-btn active">Hottest</div>
-    						<div id="latest" class="sort-btn">Latest</div>
+    						<div id="hottest" class="sort-btn active field-tip">Hottest<span class="tip-content">Sort by occurrence numbers in descending order, which represent how many times each shade is mentioned in the search results.</span></div>
+    						<div id="latest" class="sort-btn field-tip">Latest<span class="tip-content">Sort by the related show's release time in descending order.</span></div>
     						<!-- used these arrows cause normal ones wouldn't be the same size somehow -->
-    						<div id="price" class="sort-btn">Price<span id="down_arrow" class="inactive" style="font-weight:bold">⇣</span><span id="up_arrow" class="inactive" style="font-weight:bold">⇡</span></div>
+    						<div id="price" class="sort-btn field-tip">Price<span id="down_arrow" class="inactive" style="font-weight:bold">⇣</span><span id="up_arrow" class="inactive" style="font-weight:bold">⇡</span><span class="tip-content">Sort by the list price of each lipstick in China, in ascending or descending order.</span></div>
   						</div>
 					</div>
 					</div>
@@ -716,6 +720,7 @@ DESIGNED & DEVELOPED by FREEHTML5.CO
 					<!-- Data Info -->
 					<div class="row">
 						<div class="col-md-12 text-center">
+							<p>Hottest: sort by occurrence numbers of each shade in the dataset (descending order) <br> Latest: sorted by the related show's release time (descending order) <br> Price: sorted by the lipstick's listing price in China (ascending or descending order)</p>
 							<p> <b>Data collection: </b>We collected all the search results (750 in total) of "Korean drama + Lipstick" at Baidu.com, which is the biggest search engine in China; then scraped the main articles of all these results, and calculated the occurrence number of each shade from the <a href="https://github.com/feifang/New-Lipstick-Effect/blob/master/data/bodyText_all_hardwrap.txt">collected text dataset</a> (about 327,000 words).</p>
 						</div>
 					</div>

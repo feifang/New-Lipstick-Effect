@@ -1310,6 +1310,7 @@ a > img.fh5co-align-center {
 }
 
 /* sort buttons css */
+/* <https://codepen.io/Zaku/pen/reGRBg/> */
 
 .btn-group {
   position: relative;
@@ -1374,5 +1375,51 @@ body {
     zoom: 0.5;
   }
 }
+
+/* Hover tooltips */
+/* <https://jsfiddle.net/i_like_robots/qrXyE/> */
+
+.field-tip {
+    position:relative;
+    /* cursor:help; */
+}
+    .field-tip .tip-content {
+    	font-size: 12px;
+		line-height: 18px;
+        position:absolute;
+        left:-40px;  /* - left padding */
+        /* right:9999px; */
+        width:150%;
+        margin-top:-105px; /* height + top/bottom padding */
+        padding:0.5em 1em;
+        border-radius: 4px;
+        color:#fff;
+        background:#f74577;
+        -webkit-box-shadow:2px 2px 5px #aaa;
+           -moz-box-shadow:2px 2px 5px #aaa;
+                box-shadow:2px 2px 5px #aaa;
+        opacity:0;
+        -webkit-transition:opacity 0.5s ease-out;
+           -moz-transition:opacity 0.5s ease-out;
+            -ms-transition:opacity 0.5s ease-out;
+             -o-transition:opacity 0.5s ease-out;
+                transition:opacity 0.5s ease-out;
+    }
+        /* <http://css-tricks.com/snippets/css/css-triangle/> */
+        .field-tip .tip-content:before {
+            content:' '; /* Must have content to display */
+            position:absolute;
+            left:50%;
+            bottom:-16px; /* 2 x border width */
+            width:0;
+            height:0;
+            margin-left:-8px; /* - border width */
+            border:8px solid transparent;
+            border-top-color:#f74577;
+        }
+        .field-tip:hover .tip-content {
+            top:-20px;
+            opacity:0.8;
+        }
 
 /*# sourceMappingURL=style.css.map */
