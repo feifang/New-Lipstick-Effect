@@ -87,6 +87,7 @@
 		}
 	};
 
+	// last edited on 2017/04/12
 	var imgHover = function(){
 		$('.js-fh5co-work-item').mouseenter(function(){
 			if ( $(window).width() > 768 ) {
@@ -100,6 +101,11 @@
 					opacity: 0
 				});
 			}
+		});
+		// Stop the page from jumping back to the top when shades are clicked.
+		// Todo: Implement the touch effect for touchscreen devices.
+		$('.js-fh5co-work-item').click(function(){
+			return false;
 		});
 	};
 
@@ -235,7 +241,7 @@
 
 	};
 
-	// last edited on 2017/02/24
+	// last edited on 2017/04/12
 	var sortShades = function() {
 		var divList = $(".fh5co-work-wrap");
 		$("#hottest").click(function(){
