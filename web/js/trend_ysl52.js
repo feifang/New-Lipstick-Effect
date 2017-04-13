@@ -15,6 +15,9 @@ var chart3 = AmCharts.makeChart("trend_ysl52",
 						"enabled": true,
 						"maximum": 0
 					},
+					"export": {
+			    	"enabled": true
+					},
 					"trendLines": [],
 					"graphs": [
 						{
@@ -1117,7 +1120,7 @@ var chart3 = AmCharts.makeChart("trend_ysl52",
 					]
 				}
 			);
-			
+
 chart3.addListener("dataUpdated", zoomChart);
 
 function zoomChart() {

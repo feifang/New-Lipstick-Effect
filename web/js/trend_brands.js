@@ -51,9 +51,9 @@ var chart0 = AmCharts.makeChart("trend_brands",
         "valueField": "points"
     }],
 //     "marginTop": 0,
-    "marginRight": 0,
-    "marginLeft": 0,
-    "marginBottom": 0,
+    // "marginRight": 0,
+    // "marginLeft": 0,
+    // "marginBottom": 0,
 //     "autoMargins": false,
     "categoryField": "name",
     "categoryAxis": {

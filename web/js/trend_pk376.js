@@ -15,6 +15,9 @@ var chart2 = AmCharts.makeChart("trend_pk376",
 						"enabled": true,
 						"maximum": 0
 					},
+					"export": {
+			    	"enabled": true
+					},
 					"trendLines": [],
 					"graphs": [
 						{
@@ -1117,7 +1120,7 @@ var chart2 = AmCharts.makeChart("trend_pk376",
 					]
 				}
 			);
-			
+
 chart2.addListener("dataUpdated", zoomChart);
 
 function zoomChart() {
