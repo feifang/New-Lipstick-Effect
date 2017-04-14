@@ -231,16 +231,6 @@
 		});
 	};
 
-	var wResize = function() {
-		mobileMenuState();
-		imgHover();
-		$(window).resize(function(){
-			mobileMenuState();
-			imgHover();
-		});
-
-	};
-
 	// last edited on 2017/04/12
 	var sortShades = function() {
 		var divList = $(".fh5co-work-wrap");
